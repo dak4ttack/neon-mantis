@@ -27,29 +27,6 @@ body, html {
     background-attachment: fixed;
 }
 
-/* --- CRT SHADER EFFECTS --- */
-.crt-overlay {
-    /* Removed visual dimming feature */
-}
-
-.scanlines {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 9998;
-    background: linear-gradient(to bottom, var(--scanline-color), var(--scanline-color) 50%, transparent 50%, transparent);
-    background-size: 100% 4px;
-    animation: scroll-scanlines 10s linear infinite;
-    opacity: 0.6;
-}
-
-@keyframes scroll-scanlines {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 100vh; }
-}
 
 /* --- LAYOUT & COMPONENTS --- */
 .content {
