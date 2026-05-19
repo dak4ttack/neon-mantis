@@ -21,8 +21,11 @@ body, html {
     color: var(--text-color);
     font-family: var(--font-main);
     overflow-x: hidden;
-    background-image: linear-gradient(to bottom, rgba(5, 10, 6, 0.8), rgba(5, 10, 6, 0.95)), url('assets/bg.png');
-    background-size: cover;
+    background-image: 
+        repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 255, 0, 0.03) 2px, rgba(0, 255, 0, 0.03) 4px),
+        linear-gradient(to bottom, rgba(5, 10, 6, 0.8), rgba(5, 10, 6, 0.95)), 
+        url('assets/bg.png');
+    background-size: auto, cover, cover;
     background-position: center;
     background-attachment: fixed;
 }
