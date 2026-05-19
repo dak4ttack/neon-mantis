@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Prevent Firefox native drag/drop overlay from getting stuck
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        window.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    });
+
     // Randomize the CRT flicker slightly to make it feel more organic
     const crtOverlay = document.createElement('style');
     document.head.appendChild(crtOverlay);
